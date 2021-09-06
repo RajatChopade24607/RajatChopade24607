@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/imgExplorer.css">
+    <link rel="stylesheet" href="../CSS/lightbox.min.css">
+    <script src="../js/lightbox-plus-jquery.min.js"></script>
+    <script src="../js/imageExplorer2.js"></script>
+
+
+    <script src="../JS/jquery.js"></script>
+    <script src="../AJAX/ajax.js"></script>
+    <script src="../JSON/data.json"></script>
+    <script src="../JS/index.js"></script>
+
+    <!--Svg files for icons-->
+
+    <title>Document</title>
+</head>
+
+<body style="background-image: url('https://cdn.pixabay.com/photo/2021/06/29/06/14/water-drops-6373296_960_720.jpg'); ">
+    <!--Top Nav bar-->
+
+   
+    <header>
+        
+        
+        
+        </h5>
+        <nav class="mb-4 navbar navbar-expand-lg navbar-dark purple lighten-1 ">
+            <br>
+            <a class="navbar-brand" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
+                    <path
+                        d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
+                </svg> CodeBuddies Photo Gallary</a>
+              
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3"
+                aria-controls="navbarSupportedContent-3" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/userLog.html">Log Page</a>
+                    </li>
+                    </li>
+                </ul>
+                <!-- <ul class="navbar-nav ml-auto nav-flex-icons"> -->
+                    
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-unique"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div> -->
+                        <div id="helloUser"></div>
+                    <!-- </li> -->
+                <!-- </ul> -->
+            </div>
+        </nav>
+    </header>
+
+    <!--Top Nav bar end-->
+
+    <!--Side nav bar-->
+
+    <aside id="sticky-social">
+        <ul>
+            <li><a href="#" class="entypo-Nature" target="_blank">🌴<span>Nature</span></a></li>
+            <li><a href="#" class="entypo-Vehicle" target="_blank">🚓<span>Vehicles</span></a></li>
+            <li><a href="#" class="entypo-Programming" target="_blank">💻<span>Programming</span></a></li>
+            <li><a href="#" class="entypo-Bird" target="_blank">🦜<span>Bird</span></a></li>
+            <li><a href="#" class="entypo-Animal" target="_blank">🦁 <span>Animal</span></a></li>
+            <li><a href="#" class="entypo-Space" target="_blank">🌍<span>Space</span></a></li>
+            <li><a href="#" class="entypo-Sports" target="_blank">⚽<span>Sports</span></a></li>
+            <li><a href="#" class="entypo-Monuments" target="_blank">🛕<span>Monuments</span></a></li>
+            <li><a href="#" class="entypo-People" target="_blank">👨‍👩‍👧‍👧<span>People</span></a></li>
+        </ul>
+    </aside>
+
+    <!--Side nav bar end-->
+
+
+    <!-- Main functionalities -->
+
+    <div class="container">
+        <container>
+            <div>
+                <!-- Main row -->
+                <div class="row upperborder"
+                    style="background-image: url('https://image.freepik.com/free-vector/aesthetic-background-vector-with-hexagons_53876-128365.jpg');">
+                    <!--Search bar -->
+                    <div class="col-6 col-md-6 col-lg-6 thumb border border-success rounded-5">
+                        <p class="lead">
+                        <h5 class="titles">•Search image here By #tags or by category 🔍 </h5>
+                        </p>
+                        <div class="col-6 col-md-6 col-lg-10">
+
+                            <div class="card-body row no-gutters align-items-center">
+
+                                <hr>
+                                <div><br><b>Search By ID or #tag: </b><input
+                                        class="form-control form-control-lg form-control-borderless" type="search"
+                                        name="name" id="criteria" required
+                                        placeholder="Search image by keyword"></i><br></div>
+                                <br><button class="btn btn-lg btn-success" id="buttonSearch" type="submit">Search Images
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg></button>
+                                <hr>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <!-- Upload image-->
+                    <div class="col-6 col-md-6 col-lg-6 thumb border border-success rounded 5px">
+                        <p class="lead">
+                        <h5 class="titles">•Upload image here 📁</h5>
+                        </p>
+                        <div class="col-6 col-md-6 col-lg-10">
+                            <div class="card-body row no-gutters align-items-center">
+                                <hr>
+
+                                <input class="form-control" type="file" id="image_file">
+                                <div><br><b>Category:-</b><select class="btn btn-warning dropdown-toggle" id="category">
+                                        <option>choose Category</option>
+                                        <option>Nature</option>
+                                        <option>Programming</option>
+                                        <option>Bird</option>
+                                        <option>Animal</option>
+                                        <option>Space</option>
+                                        <option>Vehicle</option>
+                                    </select><br></div>
+                                <div><br><b>#tag:-<b><input type="text" name="name" id="hhTag" required><br></div>
+                                <br><button class="file btn btn-lg btn-primary" id="button2" type="submit">Upload Image
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
+                                    </svg></button>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </container>
+
+
+        <section>
+            <br>
+            <h3 class="titles">🖼️ Find some Beautiful images here</h3>
+            <br>
+            <div class="gallery center lowerborder"
+                style="background-image: url('https://image.freepik.com/free-vector/pastel-ombre-background-pink-purple_53876-120750.jpg'); ">
+
+                <hr>
+                <button class="file btn btn-lg btn-primary" id="button1">Click To Show image</button>
+                <hr>
+
+                <div id="imageAdd"></div>
+
+                <h6>Sample Images</h6>
+                <a href="../images/img1.jpeg" data-lightbox="mygallery"><img src="../images/img1.jpeg" alt=""></a>
+                <a href="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" data-lightbox="mygallery"><img
+                        src="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" alt=""></a>
+                <a href="../images/img1.jpeg" data-lightbox="mygallery"><img src="../images/img1.jpeg" alt=""></a>
+                <a href="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" data-lightbox="mygallery"><img
+                        src="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" alt=""></a>
+
+                <!-- <div id="" style="overflow:scroll; height:100px"> tesing material Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ad tenetur nostrum corporis quidem illo asperiores modi ea veniam blanditiis, ab aut rem magni, nesciunt, repellat aspernatur quo doloribus reprehenderit.</div> -->
+            </div>
+
+
+        </section>
+    </div>
+
+
+    <!-- Foopter -->
+    <footer class="footer ">
+        <div class="mt-5 pt-5 pb-5 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-xs-12 about-company">
+                        <h2>CodeBuddies</h2>
+                        <p class="pr-5 text-white-50">CodeBuddies Image gallary </p>
+                        <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i
+                                    class="fa fa-linkedin-square"></i></a><br><a href="#"><i
+                                    class="fa fa-twitter-square" aria-hidden="true"></i></a><a href="#"><i
+                                    class="fa fa fa-instagram" aria-hidden="true"></i></a></p>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 links">
+                        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+                        <ul class="m-0 p-0">
+                            <li>- <a href="#">Follow us on Facebook</a></li>
+                            <li>- <a href="#">Follow us on Twitter</a></li>
+                            <li>- <a href="#">Follow us on Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-xs-12 location">
+                        <h4 class="mt-lg-0 mt-sm-2">Location</h4>
+                        <p>Nowhere in india</p>
+                        <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
+                        <p><i class="fa fa-envelope-o mr-2"></i>CodeBuddies@gmail.com</p>
+                    </div>
+                </div>
+                <!-- <div class="row mt-5">
+                <div class="col copyright">
+                  <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
+                </div>
+              </div> -->
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+{
+  "imageUpload": [
+    {
+      "activity": "Image Upload ",
+      "userId": "557",
+      "imageHtag": "program",
+      "imageSrc": "programming_2.jfif",
+      "category": "Programming",
+      "Date": "9/6/2021, 9:24:54 AM",
+      "id": 23
+    },
+    {
+      "activity": "Image Upload ",
+      "userId": "557",
+      "imageHtag": "Pan",
+      "imageSrc": "animal_2.jfif",
+      "category": "Nature",
+      "Date": "9/6/2021, 9:32:58 AM",
+      "id": 24
+    }
+  ],
+  "comments": [
+    {
+      "activity": "Comment",
+      "comment": "CC",
+      "imageId": "23",
+      "userId": "557",
+      "Date": "9/6/2021, 9:25:27 AM",
+      "id": 75
+    },
+    {
+      "activity": "Comment",
+      "comment": "Nature1",
+      "imageId": "24",
+      "userId": "557",
+      "Date": "9/6/2021, 9:33:17 AM",
+      "id": 76
+    }
+  ],
+  "likes": [
+    {
+      "activity": "Like",
+      "imageId": "23",
+      "userId": "557",
+      "Date": "9/6/2021, 9:25:19 AM",
+      "id": 149
+    },
+    {
+      "activity": "Like",
+      "imageId": "24",
+      "userId": "557",
+      "Date": "9/6/2021, 9:33:08 AM",
+      "id": 150
+    },
+    {
+      "activity": "Like",
+      "imageId": "23",
+      "userId": "557",
+      "Date": "9/6/2021, 9:33:25 AM",
+      "id": 151
+    }
+  ],
+  "userData": [
+    {
+      "name": "Baburao",
+      "email": "Baba@gmail.com",
+      "password": "789456",
+      "id": 557
+    }
+  ]
+}
